@@ -24,11 +24,15 @@
   "devDependencies": {
     "css-loader": "^6.5.1",
     "eslint": "^8.6.0",
+    "eslint-config-google": "^0.14.0",
     "html-webpack-plugin": "^5.5.0",
     "sass": "^1.45.2",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "make-drop-down-menu": "^1.0.1"
   }
 }
