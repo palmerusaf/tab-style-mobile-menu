@@ -1,33 +1,70 @@
 @import url("hamburgers/dist/hamburgers.css");
 
-@media screen and (min-width: 800px) {
-  .menu-item-displayed {
-  }
-  .menu-item-under-icon {
-  }
-  .list-displayed {
-    &--item {
-    }
-  }
-  .list-under-icon {
-    &--item {
-    }
-  }
-  .hamburger {
-  }
+.menu-bar {
+  display: flex;
+  justify-content: space-between;
 }
 
 .menu-item-displayed {
 }
+
 .menu-item-under-icon {
 }
+
+.menu-item-displayed,
+.menu-item-under-icon {
+  white-space: nowrap;
+}
+
 .list-displayed {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
   &--item {
   }
 }
+
 .list-under-icon {
+  display: none;
   &--item {
   }
 }
+
+.list-displayed,
+.list-under-icon {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .hamburger {
+  &-box {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .menu-bar {
+  }
+
+  .menu-item-displayed {
+  }
+
+  .menu-item-under-icon {
+  }
+
+  .list-displayed {
+    &--item {
+    }
+  }
+
+  .list-under-icon {
+    &--item {
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
 }

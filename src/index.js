@@ -12,6 +12,7 @@ const mobileMenu = (() => {
 
   function _makeNavBar() {
     const nav = document.createElement("nav");
+    nav.classList = "menu-bar";
     const listDisplayed = document.createElement("ul");
     listDisplayed.classList = "list-displayed";
     menuItemDisplayed.forEach((item) => {
