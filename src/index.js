@@ -62,7 +62,7 @@ const mobileMenu = (() => {
 
     function _makeTriggerToggleItemDisplay(trigger, item) {
       trigger.addEventListener("click", () => {
-        item.classList.toggle("list-under-icon--hidden");
+        item.classList.toggle("list-under-icon--visible");
       });
     }
 

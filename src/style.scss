@@ -1,1 +1,33 @@
 @import url("hamburgers/dist/hamburgers.css");
+
+@media screen and (min-width: 800px) {
+  .menu-item-displayed {
+  }
+  .menu-item-under-icon {
+  }
+  .list-displayed {
+    &--item {
+    }
+  }
+  .list-under-icon {
+    &--item {
+    }
+  }
+  .hamburger {
+  }
+}
+
+.menu-item-displayed {
+}
+.menu-item-under-icon {
+}
+.list-displayed {
+  &--item {
+  }
+}
+.list-under-icon {
+  &--item {
+  }
+}
+.hamburger {
+}
