@@ -23,6 +23,15 @@ const mobileMenu = (() => {
     });
     nav.appendChild(listDisplayed);
 
+    const listUnderIcon = _makeListUnderIcon();
+    document.body.appendChild(listUnderIcon)
+    const burgerIcon = _makeHamburgerButton(listUnderIcon);
+    nav.appendChild(burgerIcon);
+
+    return nav;
+  }
+
+  function _makeListUnderIcon() {
     const listUnderIcon = document.createElement("ul");
     listUnderIcon.classList = "list-under-icon";
     menuItemUnderIcon.forEach((item) => {
@@ -31,12 +40,7 @@ const mobileMenu = (() => {
       li.appendChild(item);
       listUnderIcon.appendChild(li);
     });
-    nav.appendChild(listUnderIcon);
-
-    const burgerIcon = _makeHamburgerButton(listUnderIcon);
-    nav.appendChild(burgerIcon);
-
-    return nav;
+    return listUnderIcon;
   }
 
   function _makeHamburgerButton(DOMNode) {

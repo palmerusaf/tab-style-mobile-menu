@@ -29,7 +29,16 @@
 }
 
 .list-under-icon {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  background-color: white;
+  height: 80%;
+  width: 80%;
+  align-items: center;
+  justify-content: space-around;
   &--item {
   }
 }
