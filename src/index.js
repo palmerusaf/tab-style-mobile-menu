@@ -2,9 +2,9 @@ import makeDropDownMenu from "make-drop-down-menu";
 import "./style.scss";
 
 const mobileMenu = (() => {
-  const displayedItems = [...document.getElementsByClassName("item-displayed")];
+  const displayedItems = [...document.getElementsByClassName("menu-item-displayed")];
   const hamburgeredItems = [
-    ...document.getElementsByClassName("item-under-icon"),
+    ...document.getElementsByClassName("menu-item-under-icon"),
   ];
 
   function _makeHamburgerButton() {
