@@ -28,7 +28,7 @@ const mobileMenu = (() => {
       const li = document.createElement("li");
       li.classList = "list-under-icon__item";
       li.appendChild(item);
-      listDisplayed.appendChild(li);
+      listUnderIcon.appendChild(li);
     });
     nav.appendChild(listUnderIcon);
 
@@ -62,6 +62,7 @@ const mobileMenu = (() => {
 
     function _makeTriggerToggleItemDisplay(trigger, item) {
       trigger.addEventListener("click", () => {
+        console.log("im here");
         item.style.display === "none"
           ? (item.style.display = "")
           : (item.style.display = "none");
