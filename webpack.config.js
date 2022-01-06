@@ -8,7 +8,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Test Page",
-      template: "index.html",
+      template: "./src/index.html",
     }),
   ],
   output: {
