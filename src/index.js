@@ -8,7 +8,7 @@ const mobileMenu = (() => {
     ...document.getElementsByClassName("menu-item-under-icon"),
   ];
 
-  document.body.appendChild(_makeNavBar());
+  document.body.prepend(_makeNavBar());
 
   function _makeNavBar() {
     const nav = document.createElement("nav");
