@@ -1,4 +1,3 @@
-import makeDropDownMenu from "make-drop-down-menu";
 import "./style.scss";
 
 const mobileMenu = (() => {
@@ -33,23 +32,50 @@ const mobileMenu = (() => {
     });
     nav.appendChild(listUnderIcon);
 
+    const burgerIcon = _makeHamburgerButton(listUnderIcon);
+    nav.appendChild(burgerIcon);
+
     return nav;
   }
 
-  function _makeHamburgerButton() {
-    const button = document.createElement("button");
-    button.classList = "hamburger hamburger--spin";
-    button.type = "button";
-    button.addEventListener("click", () => {
-      button.classList.toggle("is-active");
-    });
-    const burgerBox = document.createElement("span");
-    burgerBox.classList = "hamburger-box";
-    const burgerInner = document.createElement("span");
-    burgerInner.classList = "hamburger-inner";
-    burgerBox.appendChild(burgerInner);
+  function _makeHamburgerButton(DOMNode) {
+    const button = _makeButton();
+    _addAnimationClickEvent(button);
+    _makeTriggerToggleItemDisplay(button, DOMNode);
+
+    const burgerBox = _makeBurgerBox();
     button.appendChild(burgerBox);
     return button;
+
+    function _makeButton() {
+      const button = document.createElement("button");
+      button.classList = "hamburger hamburger--spin";
+      button.type = "button";
+      return button;
+    }
+
+    function _addAnimationClickEvent(button) {
+      button.addEventListener("click", () => {
+        button.classList.toggle("is-active");
+      });
+    }
+
+    function _makeTriggerToggleItemDisplay(trigger, item) {
+      trigger.addEventListener("click", () => {
+        item.style.display === "none"
+          ? (item.style.display = "")
+          : (item.style.display = "none");
+      });
+    }
+
+    function _makeBurgerBox() {
+      const burgerBox = document.createElement("span");
+      burgerBox.classList = "hamburger-box";
+      const burgerInner = document.createElement("span");
+      burgerInner.classList = "hamburger-inner";
+      burgerBox.appendChild(burgerInner);
+      return burgerBox;
+    }
   }
 })();
 export { mobileMenu };
