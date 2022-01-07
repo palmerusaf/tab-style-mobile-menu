@@ -8,12 +8,6 @@
   justify-content: space-between;
 }
 
-.menu-item-displayed {
-}
-
-.menu-item-under-icon {
-}
-
 .menu-item-displayed,
 .menu-item-under-icon {
   white-space: nowrap;
@@ -24,8 +18,6 @@
   flex: 1;
   justify-content: space-evenly;
   align-items: center;
-  &--item {
-  }
 }
 
 .list-under-icon {
@@ -42,8 +34,6 @@
   &--visible {
     transition: 400ms;
     right: 10%;
-  }
-  &--item {
   }
 }
 
@@ -65,24 +55,14 @@
     padding: 1rem;
   }
 
-  .menu-item-displayed {
-  }
-
-  .menu-item-under-icon {
-  }
-
   .list-displayed {
     justify-content: left;
-    &--item {
-    }
   }
 
   .list-under-icon {
     flex-direction: row;
     justify-content: right;
     flex: 1;
-    &--item {
-    }
   }
 
   .list-displayed,

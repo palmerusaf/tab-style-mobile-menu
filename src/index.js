@@ -17,7 +17,6 @@ const mobileMenu = (() => {
     listDisplayed.classList = "list-displayed";
     menuItemDisplayed.forEach((item) => {
       const li = document.createElement("li");
-      li.classList = "list-displayed__item";
       li.appendChild(item);
       listDisplayed.appendChild(li);
     });
@@ -36,7 +35,6 @@ const mobileMenu = (() => {
     listUnderIcon.classList = "list-under-icon";
     menuItemUnderIcon.forEach((item) => {
       const li = document.createElement("li");
-      li.classList = "list-under-icon__item";
       li.appendChild(item);
       listUnderIcon.appendChild(li);
     });
