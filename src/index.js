@@ -8,10 +8,11 @@ const mobileMenu = (() => {
     ...document.getElementsByClassName("menu-item-under-icon"),
   ];
 
-  document.body.appendChild(_makeNavBar());
+  document.body.prepend(_makeNavBar());
 
   function _makeNavBar() {
     const nav = document.createElement("nav");
+    nav.classList = "menu-bar";
     const listDisplayed = document.createElement("ul");
     listDisplayed.classList = "list-displayed";
     menuItemDisplayed.forEach((item) => {
@@ -22,6 +23,15 @@ const mobileMenu = (() => {
     });
     nav.appendChild(listDisplayed);
 
+    const listUnderIcon = _makeListUnderIcon();
+    document.body.appendChild(listUnderIcon)
+    const burgerIcon = _makeHamburgerButton(listUnderIcon);
+    nav.appendChild(burgerIcon);
+
+    return nav;
+  }
+
+  function _makeListUnderIcon() {
     const listUnderIcon = document.createElement("ul");
     listUnderIcon.classList = "list-under-icon";
     menuItemUnderIcon.forEach((item) => {
@@ -30,12 +40,7 @@ const mobileMenu = (() => {
       li.appendChild(item);
       listUnderIcon.appendChild(li);
     });
-    nav.appendChild(listUnderIcon);
-
-    const burgerIcon = _makeHamburgerButton(listUnderIcon);
-    nav.appendChild(burgerIcon);
-
-    return nav;
+    return listUnderIcon;
   }
 
   function _makeHamburgerButton(DOMNode) {
@@ -62,7 +67,7 @@ const mobileMenu = (() => {
 
     function _makeTriggerToggleItemDisplay(trigger, item) {
       trigger.addEventListener("click", () => {
-        item.classList.toggle("list-under-icon--hidden");
+        item.classList.toggle("list-under-icon--visible");
       });
     }
 
