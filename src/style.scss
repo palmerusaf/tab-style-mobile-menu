@@ -4,7 +4,7 @@
   display: flex;
   position: sticky;
   top: 0;
-  background-color: white;
+  background: inherit;
   justify-content: space-between;
 }
 
@@ -33,12 +33,16 @@
   flex-direction: column;
   position: fixed;
   top: 10%;
-  left: 10%;
-  background-color: white;
+  right: -100%;
+  background-color: inherit;
   height: 80%;
   width: 80%;
   align-items: center;
   justify-content: space-around;
+  &--visible {
+    transition: 400ms;
+    right: 10%;
+  }
   &--item {
   }
 }
