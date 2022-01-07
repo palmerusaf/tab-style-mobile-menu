@@ -71,13 +71,24 @@
   }
 
   .list-displayed {
+    justify-content: left;
     &--item {
     }
   }
 
   .list-under-icon {
+    flex-direction: row;
+    justify-content: right;
+    flex: 1;
     &--item {
     }
+  }
+
+  .list-displayed,
+  .list-under-icon{
+    position: static;
+    gap: 2rem;
+    width: 100%;
   }
 
   .hamburger {

@@ -24,7 +24,7 @@ const mobileMenu = (() => {
     nav.appendChild(listDisplayed);
 
     const listUnderIcon = _makeListUnderIcon();
-    document.body.appendChild(listUnderIcon)
+    document.body.prepend(listUnderIcon)
     const burgerIcon = _makeHamburgerButton(listUnderIcon);
     nav.appendChild(burgerIcon);
 
