@@ -13,31 +13,27 @@ const mobileMenu = (() => {
   function _makeNavBar() {
     const nav = document.createElement("nav");
     nav.classList = "menu-bar";
-    const listDisplayed = document.createElement("ul");
-    listDisplayed.classList = "list-displayed";
-    menuItemDisplayed.forEach((item) => {
-      const li = document.createElement("li");
-      li.appendChild(item);
-      listDisplayed.appendChild(li);
-    });
-    nav.appendChild(listDisplayed);
 
+    const listDisplayed = _makeListDisplayed();
     const listUnderIcon = _makeListUnderIcon();
+    const hamburgerButton = _makeHamburgerButton(listUnderIcon);
+
+    nav.appendChild(listDisplayed);
+    nav.appendChild(hamburgerButton);
     nav.appendChild(listUnderIcon);
-    const burgerIcon = _makeHamburgerButton(listUnderIcon);
-    nav.appendChild(burgerIcon);
 
     return nav;
   }
 
+  function _makeListDisplayed() {
+    const listDisplayed = _makeListFromItems(menuItemDisplayed);
+    listDisplayed.classList = "list-displayed";
+    return listDisplayed;
+  }
+
   function _makeListUnderIcon() {
-    const listUnderIcon = document.createElement("ul");
+    const listUnderIcon = _makeListFromItems(menuItemUnderIcon);
     listUnderIcon.classList = "list-under-icon";
-    menuItemUnderIcon.forEach((item) => {
-      const li = document.createElement("li");
-      li.appendChild(item);
-      listUnderIcon.appendChild(li);
-    });
     return listUnderIcon;
   }
 
@@ -46,15 +42,29 @@ const mobileMenu = (() => {
     _addAnimationClickEvent(button);
     _makeTriggerToggleItemDisplay(button, DOMNode);
 
-    const burgerBox = _makeBurgerBox();
-    button.appendChild(burgerBox);
     return button;
 
     function _makeButton() {
       const button = document.createElement("button");
       button.classList = "hamburger hamburger--spin";
       button.type = "button";
+
+      const burgerBox = _makeBurgerBox();
+      button.appendChild(burgerBox);
+
       return button;
+
+      function _makeBurgerBox() {
+        const burgerBox = document.createElement("span");
+        burgerBox.classList = "hamburger-box";
+
+        const burgerInner = document.createElement("span");
+        burgerInner.classList = "hamburger-inner";
+
+        burgerBox.appendChild(burgerInner);
+
+        return burgerBox;
+      }
     }
 
     function _addAnimationClickEvent(button) {
@@ -68,15 +78,16 @@ const mobileMenu = (() => {
         item.classList.toggle("list-under-icon--visible");
       });
     }
+  }
 
-    function _makeBurgerBox() {
-      const burgerBox = document.createElement("span");
-      burgerBox.classList = "hamburger-box";
-      const burgerInner = document.createElement("span");
-      burgerInner.classList = "hamburger-inner";
-      burgerBox.appendChild(burgerInner);
-      return burgerBox;
-    }
+  function _makeListFromItems(items) {
+    const list = document.createElement("ul");
+    items.forEach((item) => {
+      const li = document.createElement("li");
+      li.appendChild(item);
+      list.appendChild(li);
+    });
+    return list;
   }
 })();
 export { mobileMenu };
