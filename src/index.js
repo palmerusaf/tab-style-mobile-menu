@@ -1,10 +1,9 @@
 import "./style.scss";
 
 const mobileMenu = (() => {
-  if (_getMenuItemDisplayed().length!==0){
-    document.body.prepend(makeNavBar());
- }
-
+  if (_getMenuItemDisplayed().length !== 0) {
+    addNavBar();
+  }
 
   function _getMenuItemDisplayed() {
     const menuItemDisplayed = [
@@ -20,7 +19,7 @@ const mobileMenu = (() => {
     return menuItemUnderIcon;
   }
 
-  function makeNavBar() {
+  function addNavBar() {
     const nav = document.createElement("nav");
     nav.classList = "menu-bar";
 
@@ -32,7 +31,7 @@ const mobileMenu = (() => {
     nav.appendChild(hamburgerButton);
     nav.appendChild(listUnderIcon);
 
-    return nav;
+    document.body.prepend(nav);
   }
 
   function _makeListDisplayed() {
@@ -99,6 +98,6 @@ const mobileMenu = (() => {
     });
     return list;
   }
-  return { makeNavBar };
+  return { addNavBar };
 })();
 export { mobileMenu };
