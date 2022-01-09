@@ -38,9 +38,10 @@ This is a simple JS function that creates a tab-style menu at the top of the web
      `import 'tab-style-mobile-menu'`
   3. If adding the links programmatically add the following line after appending your links:
      `mobileMenu.addNavBar();`
+
      Example:
 
-```
+    ```
    const link1 = document.createElement("a");
 
    link1.textContent = "link1";
@@ -69,7 +70,7 @@ This is a simple JS function that creates a tab-style menu at the top of the web
    document.body.appendChild(otherLink3);
 
    mobileMenu.addNavBar();
-```
+    ```
 * Note module will not remove and nav bars present. If this module is used more than once it could cause problems.
 
 ## Bugs and suggestions
