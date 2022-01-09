@@ -71,6 +71,9 @@ This is a simple JS function that creates a tab-style menu at the top of the web
    mobileMenu.addNavBar();
 ```
 * Note module will not remove and nav bars present. If this module is used more than once it could cause problems.
+
+## Bugs and suggestions
+* Report bugs and suggestions [here](https://github.com/palmerusaf/tab-style-mobile-menu/issues)
 ## Motivations
 
 The motivations behind this project are to practice creating commonly used JS web functions using standard JS and practicing publishing node packages.
