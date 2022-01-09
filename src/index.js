@@ -1,16 +1,24 @@
 import "./style.scss";
 
 const mobileMenu = (() => {
-  const menuItemDisplayed = [
-    ...document.getElementsByClassName("menu-item-displayed"),
-  ];
-  const menuItemUnderIcon = [
-    ...document.getElementsByClassName("menu-item-under-icon"),
-  ];
+  if (_getMenuItemDisplayed() && _getMenuItemUnderIcon())
+    document.body.prepend(makeNavBar());
 
-  document.body.prepend(_makeNavBar());
+  function _getMenuItemDisplayed() {
+    const menuItemDisplayed = [
+      ...document.getElementsByClassName("menu-item-displayed"),
+    ];
+    return menuItemDisplayed;
+  }
 
-  function _makeNavBar() {
+  function _getMenuItemUnderIcon() {
+    const menuItemUnderIcon = [
+      ...document.getElementsByClassName("menu-item-under-icon"),
+    ];
+    return menuItemUnderIcon;
+  }
+
+  function makeNavBar() {
     const nav = document.createElement("nav");
     nav.classList = "menu-bar";
 
@@ -26,13 +34,13 @@ const mobileMenu = (() => {
   }
 
   function _makeListDisplayed() {
-    const listDisplayed = _makeListFromItems(menuItemDisplayed);
+    const listDisplayed = _makeListFromItems(_getMenuItemDisplayed());
     listDisplayed.classList = "list-displayed";
     return listDisplayed;
   }
 
   function _makeListUnderIcon() {
-    const listUnderIcon = _makeListFromItems(menuItemUnderIcon);
+    const listUnderIcon = _makeListFromItems(_getMenuItemUnderIcon());
     listUnderIcon.classList = "list-under-icon";
     return listUnderIcon;
   }
@@ -89,5 +97,6 @@ const mobileMenu = (() => {
     });
     return list;
   }
+  return { makeNavBar };
 })();
 export { mobileMenu };
