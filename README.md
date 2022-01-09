@@ -4,6 +4,10 @@
 
 This is a simple JS function that creates a tab-style menu at the top of the website when the site is accessed on mobile. It does this by reading the document for links with specific class names and converting them into a nav-bar.
 
+## [ GitHub Repository ](https://github.com/palmerusaf/tab-style-mobile-menu)
+
+## [Live Preview Example](https://palmerusaf.github.io/tab-style-mobile-menu)
+
 ## How to use
 
 #### Without NPM
@@ -41,40 +45,43 @@ This is a simple JS function that creates a tab-style menu at the top of the web
 
      Example:
 
-    ```
-   const link1 = document.createElement("a");
+  ```
+  const link1 = document.createElement("a");
 
-   link1.textContent = "link1";
-   link1.classList = "menu-item-displayed";
-   document.body.appendChild(link1);
-   const link2 = document.createElement("a");
-   link2.textContent = "link2";
-   link2.classList = "menu-item-displayed";
-   document.body.appendChild(link2);
-   const link3 = document.createElement("a");
-   link3.textContent = "link3";
-   link3.classList = "menu-item-displayed";
-   document.body.appendChild(link3);
+  link1.textContent = "link1";
+  link1.classList = "menu-item-displayed";
+  document.body.appendChild(link1);
+  const link2 = document.createElement("a");
+  link2.textContent = "link2";
+  link2.classList = "menu-item-displayed";
+  document.body.appendChild(link2);
+  const link3 = document.createElement("a");
+  link3.textContent = "link3";
+  link3.classList = "menu-item-displayed";
+  document.body.appendChild(link3);
 
-   const otherLink1 = document.createElement("a");
-   otherLink1.textContent = "otherLink1";
-   otherLink1.classList = "menu-item-displayed";
-   document.body.appendChild(otherLink1);
-   const otherLink2 = document.createElement("a");
-   otherLink2.textContent = "otherLink2";
-   otherLink2.classList = "menu-item-displayed";
-   document.body.appendChild(otherLink2);
-   const otherLink3 = document.createElement("a");
-   otherLink3.textContent = "otherLink3";
-   otherLink3.classList = "menu-item-displayed";
-   document.body.appendChild(otherLink3);
+  const otherLink1 = document.createElement("a");
+  otherLink1.textContent = "otherLink1";
+  otherLink1.classList = "menu-item-displayed";
+  document.body.appendChild(otherLink1);
+  const otherLink2 = document.createElement("a");
+  otherLink2.textContent = "otherLink2";
+  otherLink2.classList = "menu-item-displayed";
+  document.body.appendChild(otherLink2);
+  const otherLink3 = document.createElement("a");
+  otherLink3.textContent = "otherLink3";
+  otherLink3.classList = "menu-item-displayed";
+  document.body.appendChild(otherLink3);
 
-   mobileMenu.addNavBar();
-    ```
+  mobileMenu.addNavBar();
+  ```
+
 * Note module will not remove and nav bars present. If this module is used more than once it could cause problems.
 
 ## Bugs and suggestions
-* Report bugs and suggestions [here](https://github.com/palmerusaf/tab-style-mobile-menu/issues)
+
+- Report bugs and suggestions [here](https://github.com/palmerusaf/tab-style-mobile-menu/issues)
+
 ## Motivations
 
 The motivations behind this project are to practice creating commonly used JS web functions using standard JS and practicing publishing node packages.
