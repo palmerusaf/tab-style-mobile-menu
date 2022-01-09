@@ -22,6 +22,12 @@
     <a class="menu-item-under-icon" href="#">other link 3</a>
     ```
 #### With NPM (preferred)
+* Enter the following into the command line:
+    `npm i tab-style-mobile-menu`
+* There are three ways to use this module with NPM
+    1. Without a module bundler:
+        The steps are the same as without NPM except add the following script tag to the head of your html file:
+        `<script src='node_modules/tab-style-mobile-menu/dist/main.js' defer>`
 
 ## Motivations
 
