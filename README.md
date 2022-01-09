@@ -29,6 +29,9 @@
         The steps are the same as without NPM except add the following script tag to the head of your html file:
         `<script src='node_modules/tab-style-mobile-menu/dist/main.js' defer>`
 
+    2. With bundler nodes already added to html document:
+        Simply add the following line to the import list of your index.js file:
+        `import 'tab-style-mobile-menu'
 ## Motivations
 
 The motivations behind this project are to practice creating commonly used JS web functions using standard JS and practicing publishing node packages.
