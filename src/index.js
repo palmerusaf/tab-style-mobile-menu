@@ -1,8 +1,10 @@
 import "./style.scss";
 
 const mobileMenu = (() => {
-  if (_getMenuItemDisplayed() && _getMenuItemUnderIcon())
+  if (_getMenuItemDisplayed().length!==0){
     document.body.prepend(makeNavBar());
+ }
+
 
   function _getMenuItemDisplayed() {
     const menuItemDisplayed = [
