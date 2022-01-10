@@ -78,6 +78,16 @@ This is a simple JS function that creates a tab-style menu at the top of the web
 
 * Note module will not remove and nav bars present. If this module is used more than once it could cause problems.
 
+## How to Style
+### Nav Bar Container
+* Use class `.menu-bar`
+### List of Main Links
+* Use class `.list-displayed`
+### List of Extra Links
+* Use class `.list-under-icon`
+### Hamburger Icon
+* Use class `.hamburger`
+
 ## Bugs and suggestions
 
 - Report bugs and suggestions [here](https://github.com/palmerusaf/tab-style-mobile-menu/issues)
