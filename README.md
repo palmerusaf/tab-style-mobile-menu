@@ -46,8 +46,9 @@ This is a simple JS function that creates a tab-style menu at the top of the web
      Example:
 
   ```
-  const link1 = document.createElement("a");
+  import { mobileMenu } from 'tab-style-mobile-menu'
 
+  const link1 = document.createElement("a");
   link1.textContent = "link1";
   link1.classList = "menu-item-displayed";
   document.body.appendChild(link1);
@@ -79,14 +80,22 @@ This is a simple JS function that creates a tab-style menu at the top of the web
 * Note module will not remove and nav bars present. If this module is used more than once it could cause problems.
 
 ## How to Style
+
 ### Nav Bar Container
-* Use class `.menu-bar`
+
+- Use class `.menu-bar`
+
 ### List of Main Links
-* Use class `.list-displayed`
+
+- Use class `.list-displayed`
+
 ### List of Extra Links
-* Use class `.list-under-icon`
+
+- Use class `.list-under-icon`
+
 ### Hamburger Icon
-* Use class `.hamburger`
+
+- Use class `.hamburger`
 
 ## Bugs and suggestions
 
